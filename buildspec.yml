@@ -9,9 +9,8 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mkdir -p output
-      - cp index.html output/index.html
       - mkdir -p output/scripts
+      - cp index.html output/index.html
       - cp scripts/*.sh output/scripts/
       - cp appspec.yml output/
   post_build:
@@ -19,5 +18,6 @@ phases:
       - echo Build completed
 
 artifacts:
+  base-directory: output
   files:
-    - output/**          # Include everything in output folder
+    - '**/*'
