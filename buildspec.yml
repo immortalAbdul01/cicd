@@ -17,4 +17,5 @@ phases:
 
 artifacts:
   files:
-    - output/index.html
+    - output/**        
+    - scripts/**
